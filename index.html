@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOLISA GmbH — Holding · Brand · Portfolio</title>
+  <meta name="description" content="Dolisa GmbH i. G. (Berlin) — Die Dachmarke für Leadgenerierung, Vertrieb und Marketing. Wir liefern qualifizierte Anfragen. Ihr Vertrieb schließt ab." />
+  <link rel="canonical" href="https://www.dolisa.de/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DOLISA GmbH" />
+  <meta property="og:title" content="DOLISA GmbH — Holding · Brand · Portfolio" />
+  <meta property="og:description" content="Die Dachmarke für Leadgenerierung, Vertrieb und Marketing. Berlin." />
+  <meta property="og:url" content="https://www.dolisa.de/" />
+  <meta name="theme-color" content="#0A0A0B" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Michroma';
+      src: url('/fonts/michroma-400-latin-ext.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Michroma';
+      src: url('/fonts/michroma-400-latin.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    :root {
+      --onyx: #0A0A0B;
+      --graphit: #1C1C20;
+      --stahl: #8A8A93;
+      --weiss: #ECECEF;
+      --pink: #FF2E93;
+      --line: rgba(138, 138, 147, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--onyx);
+      color: var(--weiss);
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--pink);
+      color: var(--onyx);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .chrome {
+      font-family: 'Michroma', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: linear-gradient(180deg, #FFFFFF 0%, #D8D8DE 38%, #5D5D66 53%, #ECECEF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stahl);
+    }
+
+    .dot {
+      display: inline-block;
+      width: 0.2em;
+      height: 0.2em;
+      background: var(--pink);
+      margin-left: 0.12em;
+      vertical-align: baseline;
+      box-shadow: 0 0 18px rgba(255, 46, 147, 0.55);
+    }
+
+    /* ─── TOPBAR ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 10, 11, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--graphit);
+    }
+
+    .nav-bar {
+      height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo-a {
+      font-family: 'Michroma', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: baseline;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      transition: color 160ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--weiss);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      background: var(--graphit);
+      border: 1px solid rgba(138, 138, 147, 0.4);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--weiss);
+      transition: border-color 160ms ease, background 160ms ease;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--weiss);
+    }
+
+    .btn-pink {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 36px;
+      background: var(--pink);
+      color: var(--onyx);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--pink);
+      transition: filter 160ms ease;
+      cursor: pointer;
+    }
+
+    .btn-pink:hover {
+      filter: brightness(1.1);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 36px;
+      background: transparent;
+      color: var(--weiss);
+      font-weight: 500;
+      font-size: 14px;
+      border: 1px solid rgba(138, 138, 147, 0.5);
+      transition: border-color 160ms ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--weiss);
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 120px 0 130px;
+      border-bottom: 1px solid var(--graphit);
+    }
+
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--graphit);
+      margin-bottom: 72px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6.2vw, 76px);
+      line-height: 1.08;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-sub {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--graphit);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .hero-claim {
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 500;
+      line-height: 1.45;
+      color: var(--weiss);
+    }
+
+    .hero-claim span {
+      color: var(--stahl);
+      font-weight: 400;
+    }
+
+    .hero-copy {
+      font-size: 15px;
+      color: var(--stahl);
+      max-width: 54ch;
+    }
+
+    .hero-actions {
+      margin-top: 52px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: 110px 0;
+      border-bottom: 1px solid var(--graphit);
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 56px;
+    }
+
+    .sec-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--pink);
+      letter-spacing: 0.18em;
+    }
+
+    .sec-title {
+      font-size: clamp(24px, 3.6vw, 42px);
+      line-height: 1.15;
+    }
+
+    /* ─── 01 WER WIR SIND ─── */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      background: var(--graphit);
+    }
+
+    .pillar {
+      padding: 44px 36px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+    }
+
+    .pillar:last-child {
+      border-right: none;
+    }
+
+    .pillar h3 {
+      font-family: 'Michroma', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 18px;
+      color: var(--weiss);
+    }
+
+    .pillar p {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--stahl);
+    }
+
+    /* ─── 02 PORTFOLIO ─── */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--graphit);
+      border: 1px solid var(--line);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .endorsement {
+      padding: 8px 14px;
+      background: var(--onyx);
+      border: 1px solid var(--line);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--weiss);
+    }
+
+    .brand-name {
+      font-family: 'Michroma', sans-serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .specs {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .spec {
+      background: var(--onyx);
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+
+    .spec strong {
+      display: block;
+      margin-top: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      color: var(--weiss);
+    }
+
+    .card-links {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 26px;
+      background: var(--weiss);
+      color: var(--onyx);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: background 160ms ease;
+    }
+
+    .btn-white:hover {
+      background: #FFFFFF;
+    }
+
+    /* ─── 03 INVESTOREN & FAKTEN ─── */
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .fact {
+      background: var(--onyx);
+      border: 1px solid var(--line);
+      padding: 32px 28px;
+    }
+
+    .fact-val {
+      margin-top: 14px;
+      font-family: 'Michroma', sans-serif;
+      font-size: clamp(22px, 2.6vw, 34px);
+      color: var(--weiss);
+    }
+
+    .fact-sub {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--stahl);
+    }
+
+    /* ─── 04 KONTAKT & RECHTLICHES ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .info-box {
+      background: var(--graphit);
+      border: 1px solid var(--line);
+      padding: 40px;
+    }
+
+    .info-row {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    details {
+      background: var(--graphit);
+      border: 1px solid var(--line);
+      margin-top: 16px;
+    }
+
+    summary {
+      padding: 20px 28px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--weiss);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .legal-body {
+      padding: 0 28px 28px;
+      font-size: 13px;
+      color: var(--stahl);
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+
+    .legal-body p + p {
+      margin-top: 12px;
+    }
+
+    .legal-body strong {
+      color: var(--weiss);
+    }
+
+    /* ─── FOOTER (LOGO B GESPERRT MIT NEONLINIE) ─── */
+    footer {
+      padding: 72px 0;
+      background: var(--onyx);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .logo-b {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-b-word {
+      font-family: 'Michroma', sans-serif;
+      font-size: 26px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    .logo-b-sub {
+      margin-top: 8px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-b-line {
+      height: 1px;
+      flex: 1;
+      background: var(--pink);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-sub,
+      .pillars,
+      .portfolio-grid,
+      .facts-grid,
+      .contact-grid,
+      .specs {
+        grid-template-columns: 1fr;
+      }
+      .pillar {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        min-height: auto;
+      }
+      .card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- KOPFLEISTE -->
+  <header>
+    <div class="wrap nav-bar">
+      <a href="#top" class="logo-a" aria-label="DOLISA.">
+        <span class="chrome">DOLISA</span><span class="dot"></span>
+      </a>
+      <nav class="nav-links mono" aria-label="Hauptnavigation">
+        <a href="#profil">01 Wer wir sind</a>
+        <a href="#portfolio">02 Portfolio</a>
+        <a href="#investoren">03 Investoren</a>
+        <a href="#kontakt">04 Kontakt</a>
+      </nav>
+      <a href="#kontakt" class="btn-ghost">Kontakt →</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="meta-strip mono">
+          <span>DOLISA GMBH I. G. · BERLIN</span>
+          <span>HOLDING · BRAND · PORTFOLIO</span>
+        </div>
+
+        <p class="mono" style="margin-bottom: 22px;">OPERATIVE HOLDING FÜR DIGITALE MARKTPLÄTZE</p>
+        <h1>
+          <span class="chrome">LEADS MIT</span><br />
+          <span class="chrome">SYSTEM</span><span class="dot"></span>
+        </h1>
+
+        <div class="hero-sub">
+          <p class="hero-claim">
+            Die Dachmarke für Leadgenerierung, Vertrieb und Marketing.<br />
+            <span>Wir liefern qualifizierte Anfragen. Ihr Vertrieb schließt ab.</span>
+          </p>
+          <p class="hero-copy">
+            Die Dolisa GmbH i. G. bündelt spezialisierte Plattformmarken unter einem Dach.
+            Wir entwickeln eigene digitale Zugänge zu erklärungsbedürftigen Märkten,
+            qualifizieren Eigentümer- und Kundenanfragen systematisch vor und übergeben sie
+            exklusiv an geprüfte Partnerunternehmen.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn-pink">Portfolio ansehen</a>
+          <a href="#investoren" class="btn-outline">Für Investoren &amp; Partner</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 WER WIR SIND -->
+    <section id="profil">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <h2 class="sec-title chrome">WER WIR SIND</h2>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <div>
+              <span class="mono">ARCHITEKTUR · 01</span>
+              <h3>Eigenständige Marken</h3>
+              <p>
+                Jede Plattform im Portfolio tritt mit eigener Identität, klarer Zielgruppenansprache
+                und spezialisierter Produktlogik am Markt auf – gekennzeichnet mit „Eine Marke der Dolisa“.
+              </p>
+            </div>
+            <span class="mono" style="color: var(--weiss);">FOKUS JE VERTIKALE</span>
+          </div>
+
+          <div class="pillar">
+            <div>
+              <span class="mono">SYSTEM · 02</span>
+              <h3>Messbare Vorqualifizierung</h3>
+              <p>
+                Wir ersetzen Streuverluste durch strukturierte Erfassung und Verifizierung.
+                Partnerunternehmen erhalten ausschließlich geprüfte Anfragen im definierten Zielgebiet.
+              </p>
+            </div>
+            <span class="mono" style="color: var(--weiss);">EXKLUSIVE 1:1-VERGABE</span>
+          </div>
+
+          <div class="pillar">
+            <div>
+              <span class="mono">SKALIERUNG · 03</span>
+              <h3>Zentrale Infrastruktur</h3>
+              <p>
+                Technologie, Datenprozesse, Qualitätskontrolle und kaufmännische Steuerung
+                liegen gebündelt in der Dolisa GmbH i. G. am Standort Berlin.
+              </p>
+            </div>
+            <span class="mono" style="color: var(--weiss);">BERLIN · DEUTSCHLAND</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 PORTFOLIO -->
+    <section id="portfolio">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <h2 class="sec-title chrome">PORTFOLIO</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- MAKLERPASS -->
+          <div class="card">
+            <div>
+              <div class="card-top">
+                <div>
+                  <span class="mono">PORTFOLIO 01 · IMMOBILIENWIRTSCHAFT</span>
+                  <div class="brand-name">MAKLERPASS</div>
+                </div>
+                <div class="endorsement">
+                  EINE MARKE DER DOLISA <span class="dot" style="width:6px;height:6px;"></span>
+                </div>
+              </div>
+
+              <p style="margin-top: 26px; font-size: 16px; color: var(--weiss);">
+                Unser erstes operatives Plattform-Tool für den deutschsprachigen Immobilienmarkt:
+                Maklerpass verbindet verkaufswillige Immobilieneigentümer mit geprüften Partner-Maklern
+                in ihrem Postleitzahlengebiet.
+              </p>
+
+              <div class="specs">
+                <div class="spec">
+                  <span class="mono">SEGMENT</span>
+                  <strong>B2C / B2B Immo</strong>
+                </div>
+                <div class="spec">
+                  <span class="mono">VERGABE</span>
+                  <strong>1:1 Exklusiv</strong>
+                </div>
+                <div class="spec">
+                  <span class="mono">STATUS</span>
+                  <strong>Operativ · Live</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-links">
+              <a href="https://www.maklerpass.de" target="_blank" rel="noopener" class="btn-white">
+                www.maklerpass.de →
+              </a>
+              <a href="https://apply.maklerpass.de" target="_blank" rel="noopener" class="btn-ghost">
+                Partner-Zugang (apply.maklerpass.de)
+              </a>
+              <a href="https://booking.maklerpass.com" target="_blank" rel="noopener" class="btn-ghost">
+                Terminbuchung
+              </a>
+            </div>
+          </div>
+
+          <!-- WEITERE MARKEN -->
+          <div class="card">
+            <div>
+              <div class="card-top">
+                <div>
+                  <span class="mono">PORTFOLIO 02 · PIPELINE</span>
+                  <div class="brand-name" style="color: var(--stahl);">NEXT VENTURES</div>
+                </div>
+              </div>
+              <p style="margin-top: 26px; font-size: 14px; color: var(--stahl);">
+                Auf Basis derselben Plattform- und Qualifizierungsarchitektur bereitet die Dolisa GmbH i. G.
+                weitere spezialisierte Marken für beratungsintensive Dienstleistungsmärkte vor.
+              </p>
+            </div>
+
+            <div style="margin-top: 40px; padding: 24px; background: var(--onyx); border: 1px solid var(--line);">
+              <span class="mono">KENNZEICHNUNG ALLER TOCHTERMARKEN</span>
+              <div style="margin-top: 10px; font-family: 'Michroma', sans-serif; font-size: 13px; letter-spacing: 0.14em;">
+                EINE MARKE DER DOLISA<span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 INVESTOREN & GOVERNANCE -->
+    <section id="investoren">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <h2 class="sec-title chrome">INVESTOREN &amp; FAKTEN</h2>
+        </div>
+
+        <div class="facts-grid">
+          <div class="fact">
+            <span class="mono">RECHTSFORM</span>
+            <div class="fact-val">GmbH i. G.</div>
+            <p class="fact-sub">Dolisa GmbH i. G. · Amtsgericht Charlottenburg, Berlin.</p>
+          </div>
+          <div class="fact">
+            <span class="mono">STAMMKAPITAL</span>
+            <div class="fact-val">25.000 €</div>
+            <p class="fact-sub">100 % eigenfinanzierte Holdingstruktur ohne Fremdkapital.</p>
+          </div>
+          <div class="fact">
+            <span class="mono">FÜHRUNG</span>
+            <div class="fact-val">Inhabergeführt</div>
+            <p class="fact-sub">Geschäftsführerin &amp; Alleingesellschafterin: Melisa Delic.</p>
+          </div>
+          <div class="fact">
+            <span class="mono">HAUPTSITZ</span>
+            <div class="fact-val">Berlin</div>
+            <p class="fact-sub">Wuhlestraße 7a, 12683 Berlin, Deutschland.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 KONTAKT & RECHTLICHES -->
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-num">04</span>
+          <h2 class="sec-title chrome">KONTAKT &amp; RECHTLICHES</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="info-box">
+            <span class="mono">DIREKTKONTAKT · HOLDING &amp; INVESTOR RELATIONS</span>
+            <h3 style="margin-top: 14px; font-size: 22px; font-weight: 700;">
+              Dolisa GmbH i. G.
+            </h3>
+            <p style="margin-top: 8px; font-size: 14px; color: var(--stahl); margin-bottom: 24px;">
+              Für Anfragen zur Unternehmensgruppe, Beteiligungen und Markenpartnerschaften:
+            </p>
+
+            <div class="info-row">
+              <span class="mono">GESCHÄFTSFÜHRUNG</span>
+              <span>Melisa Delic</span>
+            </div>
+            <div class="info-row">
+              <span class="mono">ANSCHRIFT</span>
+              <span>Wuhlestraße 7a, 12683 Berlin</span>
+            </div>
+            <div class="info-row">
+              <span class="mono">E-MAIL HOLDING</span>
+              <a href="mailto:info@dolisa.de" style="color: var(--pink); font-weight: 600;">info@dolisa.de</a>
+            </div>
+            <div class="info-row">
+              <span class="mono">PORTFOLIO MAKLERPASS</span>
+              <a href="https://www.maklerpass.de" target="_blank" rel="noopener">www.maklerpass.de →</a>
+            </div>
+          </div>
+
+          <div>
+            <details open>
+              <summary>
+                <span>Impressum (§ 5 DDG)</span>
+                <span>+</span>
+              </summary>
+              <div class="legal-body">
+                <p>
+                  <strong>Anbieterin:</strong> Dolisa GmbH i. G. · Wuhlestraße 7a, 12683 Berlin, Deutschland
+                </p>
+                <p>
+                  <strong>Vertreten durch die Geschäftsführerin:</strong> Melisa Delic
+                </p>
+                <p>
+                  <strong>Kontakt:</strong> E-Mail: <a href="mailto:info@dolisa.de">info@dolisa.de</a> · Internet: www.dolisa.de
+                </p>
+                <p>
+                  <strong>Registereintrag &amp; Umsatzsteuer-ID:</strong> Handelsregister Amtsgericht Charlottenburg, Berlin (HRB in Eintragung) · USt-IdNr. gemäß § 27a UStG: in Zuteilung.
+                </p>
+                <p>
+                  <strong>Verantwortlich gemäß § 18 Abs. 2 MStV:</strong> Melisa Delic, Wuhlestraße 7a, 12683 Berlin.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span>Datenschutzerklärung (DSGVO)</span>
+                <span>+</span>
+              </summary>
+              <div class="legal-body">
+                <p>
+                  <strong>1. Verantwortliche Stelle:</strong> Dolisa GmbH i. G., Wuhlestraße 7a, 12683 Berlin · Geschäftsführerin: Melisa Delic · Datenschutz-Kontakt: <a href="mailto:datenschutz@dolisa.de">datenschutz@dolisa.de</a>.
+                </p>
+                <p>
+                  <strong>2. Hosting &amp; Server-Logfiles:</strong> Beim Aufruf dieser Website werden technisch erforderliche Verbindungsdaten (anonymisierte IP-Adresse, Zeitpunkt, angeforderte Ressource, Browserkennung) auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet, um den sicheren Betrieb der Seite zu gewährleisten. Es werden keine Tracking- oder Marketing-Cookies eingesetzt.
+                </p>
+                <p>
+                  <strong>3. Kontaktaufnahme per E-Mail:</strong> Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 lit. b und f DSGVO).
+                </p>
+                <p>
+                  <strong>4. Ihre Rechte:</strong> Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Zuständige Aufsichtsbehörde: Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (LOGO B) -->
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="logo-b" aria-label="DOLISA GMBH">
+        <span class="logo-b-word chrome">DOLISA</span>
+        <div class="logo-b-sub">
+          <span class="logo-b-line"></span>
+          <span class="mono" style="font-size: 10px; letter-spacing: 0.36em;">GMBH</span>
+          <span class="logo-b-line"></span>
+        </div>
+      </div>
+
+      <div class="mono" style="text-align: right; line-height: 1.8;">
+        <div>DOLISA GMBH I. G. · WUHLESTRASSE 7A · 12683 BERLIN</div>
+        <div>GESCHÄFTSFÜHRERIN: MELISA DELIC · INFO@DOLISA.DE</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
